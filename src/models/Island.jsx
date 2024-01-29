@@ -24,6 +24,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
   const rotationSpeed = useRef(0);
   const dampingFactor = 0.95;
 
+  // When the mouse is graping the canvas
   const handlePointerDown = (e) => {
     e.stopPropagation();
     e.preventDefault();
@@ -33,12 +34,14 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
     lastX.current = clientX;
   }
 
+  // When the mouse relising the grap of the canvas
   const handlePointerUp = (e) => {
     e.stopPropagation();
     e.preventDefault();
-    setIsRotating(true);
+    setIsRotating(false);
   }
 
+  // When the mouse is graping the canvas and drag is left or right
   const handlePointerMove = (e) => {
     e.stopPropagation();
     e.preventDefault();
@@ -57,6 +60,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
 
   }
 
+  // When pressing the arrow keys left or right
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowLeft') {
       if (!isRotating) setIsRotating(true);
@@ -67,6 +71,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
     }
   }
 
+  // When relising the arrow keys left or right
   const handleKeyUp = (e) => {
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') setIsRotating(false);
   }
@@ -78,6 +83,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
       if (Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0;
       }
+      islandRef.current.rotation.y += rotationSpeed.current;
     } else {
       const rotation = islandRef.current.rotation.y;
 
