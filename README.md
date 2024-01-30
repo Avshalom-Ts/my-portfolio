@@ -45,3 +45,8 @@ npm install @react-three/drei
 ```bash
  npm i @react-spring/three
 ```
+
+- [To send email from contact page](https://www.emailjs.com/)
+```bash
+npm i @emailjs/browser
+```
