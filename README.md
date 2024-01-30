@@ -50,3 +50,8 @@ npm install @react-three/drei
 ```bash
 npm i @emailjs/browser
 ```
+
+- [react-vertical-timeline-component](https://www.npmjs.com/package/react-vertical-timeline-component)
+```bash
+npm i react-vertical-timeline-component
+```
