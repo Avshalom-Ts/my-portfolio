@@ -35,6 +35,7 @@ const About = () => {
           <p>I'm junior developer that have lot of experience in personal projects,Here's the rundown:</p>
         </div>
 
+        {/* Experiences Section */}
         <div className='mt-12 flex'>
           <VerticalTimeline>
             {experiences.map((experience) => (
@@ -42,7 +43,7 @@ const About = () => {
                 key={experience.company_name}
                 date={experience.date}
                 icon={
-                  <div>
+                  <div className='flex justify-center items-center w-full h-full'>
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
@@ -50,7 +51,8 @@ const About = () => {
                     />
                   </div>
                 }
-                iconStyle={{
+                iconStyle={{ background: experience.iconBg }}
+                contentStyle={{
                   borderBottom: '8px',
                   borderStyle: 'solid',
                   borderBottomColor: experience.iconBg,
@@ -61,11 +63,13 @@ const About = () => {
                   <h3 className='text-black text-xl font-poppins font-semibold'>
                     {experience.title}
                   </h3>
-                  <p className='text-black-500 font-black' style={{ margin: 0 }}>
+                  <p className='text-black-500 font-medium text-base'
+                    style={{ margin: 0 }}>
                     {experience.company_name}
                   </p>
                 </div>
-                <ul className='mt-5 list-disc ml-5 space-y-2'>
+
+                <ul className='my-5 list-disc ml-5 space-y-2'>
                   {experience.points.map((point, index) => (
                     <li key={`experience-point-${index}`} className='text-black-500/50 font-normal pl-1 text-sm'>
                       {point}
