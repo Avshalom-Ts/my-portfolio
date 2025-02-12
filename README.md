@@ -2,6 +2,8 @@
 
 - [YouTube-Tutor](https://www.youtube.com/watch?v=FkowOdMjvYo&t=1105s&ab_channel=JavaScriptMastery)
 
+<img src="src/assets/images/HomePage.png" alt="Home-Page-screenshot" style="hight: 300px" />
+
 ## Materials
 
 [3d-Models From Sketchfab](https://sketchfab.com/)
